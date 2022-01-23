@@ -1,12 +1,9 @@
 export default async function callback(request) {
-  const originPattern = 'https://oauth.peacemeal.workers.dev'
   const provider = 'github';
   let message;
   
   const { searchParams } = new URL(request.url);
   const code = searchParams.get('code');
-
-  console.log(code);
 
   const response = await fetch(
     "https://github.com/login/oauth/access_token",
@@ -50,8 +47,8 @@ export default async function callback(request) {
     <script type="application/javascript">
     (() => {
       const fn = (e) => {
-        console.log("receiveMessage %o", e)
-        if (!e.origin.match(${JSON.stringify(originPattern)})) {
+        // receive message
+        if (!e.origin.match("${ORIGIN_PATTERN}")) {
           console.log('Invalid origin: %s', e.origin);
           return;
         }
@@ -76,12 +73,3 @@ export default async function callback(request) {
     }
   });
 }
-
-// Repo "tompeace/amelie-peace-website" not found.
-
-// Please ensure the repo information is spelled correctly.
-
-// If the repo is private, make sure you're logged into a GitHub account with access.
-
-// If your repo is under an organization, ensure the organization has granted access to Netlify
-// CMS.
