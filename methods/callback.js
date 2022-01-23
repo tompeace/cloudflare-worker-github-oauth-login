@@ -1,5 +1,5 @@
 export default async function callback(request) {
-  const originPattern = 'localhost'
+  const originPattern = 'https://oauth.peacemeal.workers.dev'
   const provider = 'github';
   let message;
   
