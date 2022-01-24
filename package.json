@@ -1,12 +1,12 @@
 {
-  "name": "cloudflare-worker-github-oauth-login",
+  "name": "cloudflare-worker-netlify-oauth",
   "version": "1.0.0",
   "private": true,
-  "description": "A Cloudflare Worker + GitHub Pages Login Example",
+  "description": "Netflify OAuth Cloudflare Worker",
   "main": "index.js",
-  "author": "Gregor Martynus (https://twitter.com/gr2m)",
-  "license": "ISC",
-  "repository": "github:gr2m/cloudflare-worker-github-oauth-login",
+  "author": "Tom Peace",
+  "license": "MIT",
+  "repository": "tompeace/cloudflare-worker-github-oauth-login",
   "release": {
     "branches": [
       "main"

@@ -48,8 +48,8 @@ export default async function callback(request) {
     (() => {
       const fn = (e) => {
         // receive message
-        if (!e.origin.match(/^(${ORIGIN_PATTERN}|localhost)$/)) {
-          console.log('Invalid origin:', e.origin);
+        if (!e.origin.match('${ORIGIN_PATTERN}') && !e.origin.match('localhost')) {
+          console.log('Invalid origin:', e.origin, 'expected: ${ORIGIN_PATTERN}');
           return;
         }
         // send message to main window

@@ -4,9 +4,8 @@ type = "javascript"
 account_id = "bb988d46f97ce67c5473781992f549e1"
 workers_dev = true
 entry-point = "./index.js"
+route = ""
+zone_id = ""
 
 [vars]
-ORIGIN_PATTERN = "localhost"
-
-[env.production.vars]
 ORIGIN_PATTERN = "https://amelie-peace.com"
