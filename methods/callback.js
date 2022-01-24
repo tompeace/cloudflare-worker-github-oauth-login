@@ -49,7 +49,7 @@ export default async function callback(request) {
       const fn = (e) => {
         // receive message
         if (!e.origin.match("${ORIGIN_PATTERN}")) {
-          console.log('Invalid origin: %s', e.origin);
+          console.log('Invalid origin:', e.origin);
           return;
         }
         // send message to main window
